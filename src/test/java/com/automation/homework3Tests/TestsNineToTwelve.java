@@ -1,4 +1,4 @@
-package com.automation.tests;
+package com.automation.homework3Tests;
 
 import com.automation.utilities.BrowserUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;

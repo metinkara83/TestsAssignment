@@ -1,9 +1,8 @@
-package com.automation.tests;
+package com.automation.homework3Tests;
 
 import com.automation.utilities.BrowserUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,8 +10,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class TestSix {
     private WebDriver driver;
@@ -57,6 +54,10 @@ public class TestSix {
         WebElement doNotReplyMail = driver.findElement(doNotReplyBy);
         String actualA = doNotReplyMail.getText();
 //        String expectedA = "do-not-reply@practice.cybertekschool.com";
+//        driver.findElement(By.className("wpcc-btn")).click();
+//        String expected2 = "do-not-reply@practice.cybertekschool.com";
+//        String actual2 = driver.findElement(By.xpath("//*[@class='from']")).getText().trim();
+//        Assert.assertEquals(actual2,expected2, "email was not received");
         String expectedA = "Thanks for subscribing to practice.cybertekschool.com!";
         Assert.assertTrue(actualA.equals(expectedA));
 
