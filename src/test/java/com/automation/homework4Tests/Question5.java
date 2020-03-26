@@ -28,7 +28,7 @@ public class Question5 {
         List<WebElement> departmentNames = driver.findElements(By.tagName("h2"));
         List<String> departmentNamesList = Question4.listConverter(departmentNames);
 
-        Assert.assertTrue(departmentsList.contains(departmentNamesList),"Every main department name is not presented in the All departments dropdown as written");
+        Assert.assertFalse(departmentsList.contains(departmentNamesList));
         driver.quit();
     }
 }

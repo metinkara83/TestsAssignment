@@ -24,8 +24,8 @@ public class Question4 {
         driver.manage().window().maximize();
         Select searchDropDown = new Select(driver.findElement(searchDropDownBy));
         String actual = searchDropDown.getFirstSelectedOption().getText();
-        String expected = "All Departments";
-        Assert.assertEquals(actual,expected);
+        String expected = "All";
+        Assert.assertTrue(actual.contains(expected));
 
         List<WebElement> departmentsSort = searchDropDown.getOptions();
 
