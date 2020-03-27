@@ -25,26 +25,10 @@ public class Question7 {
         driver.manage().window().maximize();
 
         List<WebElement> validLinks = driver.findElements(By.tagName("a"));
-        List<String> linkStrings = new ArrayList<>();
-        for (WebElement validLink : validLinks) {
-            linkStrings.add(validLink.getAttribute("href"));
+        System.out.println(validLinks.toString());
+        for (WebElement link : validLinks) {
+            Assert.assertTrue(link.isEnabled());
         }
-        for (int i = 0 ; i < linkStrings.size() ; i++){
-            if(!linkStrings.equals(null)){
-                Assert.assertTrue(isValid(linkStrings.get(i)));
-            }
-        }
-
         driver.quit();
-    }
-
-    public static boolean isValid(String url) {
-        try {
-            new URL(url).toURI();
-            return true;
-        }
-        catch (Exception e) {
-            return false;
-        }
     }
 }
